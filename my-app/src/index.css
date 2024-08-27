@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f9;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.add-task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-task-form input,
+.add-task-form select,
+.add-task-form button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.add-task-form input,
+.add-task-form select {
+  flex: 1;
+}
+
+.add-task-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.add-task-form button:hover {
+  background-color: #0056b3;
+}
+
+.filter-buttons {
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-buttons button:hover {
+  background-color: #5a6268;
+}
+
+.task-list {
+  margin-top: 20px;
+}
+
+.accordion {
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.accordion-header:hover {
+  background-color: #0056b3;
+}
+
+.accordion-body {
+  display: none;
+  overflow: hidden;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.accordion-body.expanded {
+  display: block;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-item span {
+  flex: 1;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.task-item span.completed {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.task-item button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.task-item button:hover {
+  background-color: #c82333;
+}
+
+.task-item button.edit {
+  background-color: #28a745;
+}
+
+.task-item button.edit:hover {
+  background-color: #218838;
+}
