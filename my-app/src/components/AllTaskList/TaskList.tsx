@@ -17,6 +17,7 @@ const TaskList = ({ tasks, toggleComplete, editTask, deleteTask }) => {
     return (
         <div className="task-list">
             {['inProgress', 'completed', 'pending'].map((section) => (
+                // accordian
                 <div key={section} className="accordion">
                     <button
                         className="accordion-header"
