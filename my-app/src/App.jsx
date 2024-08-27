@@ -29,7 +29,7 @@ const App = () => {
 
     const toggleComplete = (id) => {
         setTasks(tasks.map(task =>
-            task.id === id ? { ...task, status: task.status === 'completed' ? 'incomplete' : 'completed' } : task
+            task.id === id ? { ...task, status: task.status === 'completed' ? 'pending' : 'completed' } : task
         ));
     };
 
@@ -39,7 +39,7 @@ const App = () => {
 
     const filteredTasks = tasks.filter(task => {
         if (filter === 'completed') return task.status === 'completed';
-        if (filter === 'incomplete') return task.status === 'incomplete';
+        if (filter === 'pending') return task.status === 'pending';
         return true;
     });
 
@@ -55,7 +55,7 @@ const App = () => {
             <div className="filter-buttons">
                 <button onClick={() => setFilter('inProgress')}>All</button>
                 <button onClick={() => setFilter('completed')}>Completed</button>
-                <button onClick={() => setFilter('incomplete')}>Incomplete</button>
+                <button onClick={() => setFilter('pending')}>Pending</button>
             </div>
 
             <TaskList

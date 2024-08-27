@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const AddTaskForm = ({ addTask, editTask, currentTask }) => {
     const [taskTitle, setTaskTitle] = useState('');
-    const [taskStatus, setTaskStatus] = useState('incomplete');
+    const [taskStatus, setTaskStatus] = useState('in progress');
     const [isEditing, setIsEditing] = useState(false);
 
     useEffect(() => {
@@ -12,7 +12,7 @@ const AddTaskForm = ({ addTask, editTask, currentTask }) => {
             setIsEditing(true);
         } else {
             setTaskTitle('');
-            setTaskStatus('incomplete');
+            setTaskStatus('in progress');
             setIsEditing(false);
         }
     }, [currentTask]);
@@ -26,7 +26,7 @@ const AddTaskForm = ({ addTask, editTask, currentTask }) => {
                 addTask(taskTitle, taskStatus);
             }
             setTaskTitle('');
-            setTaskStatus('incomplete');
+            setTaskStatus('in progress');
         }
     };
 
@@ -44,9 +44,9 @@ const AddTaskForm = ({ addTask, editTask, currentTask }) => {
                 value={taskStatus}
                 onChange={(e) => setTaskStatus(e.target.value)}
             >
-                <option value="in-progress">⚪ All</option>
-                <option value="incomplete"> 🟡 Pending</option>
-                <option value="completed">🟢 Completed</option>
+                <option value="in progress">⚪ in progress</option>
+                <option value="pending"> 🟡 pending</option>
+                <option value="completed">🟢 completed</option>
             </select>
             <button type="submit">
                 {isEditing ? 'Edit Task' : 'Add Task'}

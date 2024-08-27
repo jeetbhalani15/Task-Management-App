@@ -12,6 +12,7 @@ const TaskItem = ({ task, toggleComplete, editTask, deleteTask }) => {
             >
                 {task.title}
             </span>
+            <span>{`Status: ${task.status}`}</span>
             <button onClick={editTask}>Edit</button>
             <button onClick={deleteTask}>Delete</button>
         </div>
