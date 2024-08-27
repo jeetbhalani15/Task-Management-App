@@ -9,14 +9,14 @@ const TaskList = ({ tasks, toggleComplete, editTask, deleteTask }) => {
     };
 
     const groupedTasks = {
-        inProgress: tasks,
+        all: tasks,
         completed: tasks.filter(task => task.status === 'completed'),
         pending: tasks.filter(task => task.status === 'incomplete')
     };
 
     return (
         <div className="task-list">
-            {['inProgress', 'completed', 'pending'].map((section) => (
+            {['all', 'completed', 'pending'].map((section) => (
                 // accordian
                 <div key={section} className="accordion">
                     <button

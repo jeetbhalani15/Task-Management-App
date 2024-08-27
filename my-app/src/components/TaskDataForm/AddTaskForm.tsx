@@ -44,7 +44,7 @@ const AddTaskForm = ({ addTask, editTask, currentTask }) => {
                 value={taskStatus}
                 onChange={(e) => setTaskStatus(e.target.value)}
             >
-                <option value="in-progress">⚪ In Progress</option>
+                <option value="in-progress">⚪ All</option>
                 <option value="incomplete"> 🟡 Pending</option>
                 <option value="completed">🟢 Completed</option>
             </select>

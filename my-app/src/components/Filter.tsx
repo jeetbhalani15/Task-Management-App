@@ -1,4 +1,3 @@
-// src/Filter.js
 import React from 'react';
 
 function Filter({ filter, setFilter }) {
