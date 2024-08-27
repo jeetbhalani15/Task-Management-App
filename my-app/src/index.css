@@ -31,7 +31,7 @@ h1 {
 .add-task-form select,
 .add-task-form button {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #9a9a9a;
   border-radius: 4px;
   font-size: 16px;
 }
@@ -150,4 +150,11 @@ h1 {
 
 .task-item button.edit:hover {
   background-color: #218838;
+}
+
+.input-box{
+  border: 2px solid black;
+}
+.select-box{
+  border: 2px solid black;
 }

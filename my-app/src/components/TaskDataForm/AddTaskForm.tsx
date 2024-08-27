@@ -33,12 +33,14 @@ const AddTaskForm = ({ addTask, editTask, currentTask }) => {
     return (
         <form onSubmit={handleSubmit} className="add-task-form">
             <input
+                className='input-box'
                 type="text"
                 value={taskTitle}
                 onChange={(e) => setTaskTitle(e.target.value)}
                 placeholder="Enter task title"
             />
             <select
+                className='select-box'
                 value={taskStatus}
                 onChange={(e) => setTaskStatus(e.target.value)}
             >

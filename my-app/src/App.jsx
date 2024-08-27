@@ -8,7 +8,7 @@ const App = () => {
         const savedTasks = localStorage.getItem('tasks');
         return savedTasks ? JSON.parse(savedTasks) : [];
     });
-    const [filter, setFilter] = useState('all');
+    const [filter, setFilter] = useState('inProgress');
     const [currentTask, setCurrentTask] = useState(null);
 
     useEffect(() => {
@@ -17,14 +17,14 @@ const App = () => {
 
     const addTask = (title, status) => {
         setTasks([...tasks, { id: Date.now(), title, status }]);
-        setCurrentTask(null);
+        setCurrentTask(null); // Reset after adding
     };
 
     const editTask = (id, title, status) => {
         setTasks(tasks.map(task =>
             task.id === id ? { ...task, title, status } : task
         ));
-        setCurrentTask(null); 
+        setCurrentTask(null); // Reset after editing
     };
 
     const toggleComplete = (id) => {
@@ -51,6 +51,13 @@ const App = () => {
                 editTask={editTask}
                 currentTask={currentTask}
             />
+            
+            <div className="filter-buttons">
+                <button onClick={() => setFilter('inProgress')}>All</button>
+                <button onClick={() => setFilter('completed')}>Completed</button>
+                <button onClick={() => setFilter('incomplete')}>Incomplete</button>
+            </div>
+
             <TaskList
                 tasks={filteredTasks}
                 toggleComplete={toggleComplete}
