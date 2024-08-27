@@ -34,6 +34,7 @@ h1 {
   border: 1px solid #9a9a9a;
   border-radius: 4px;
   font-size: 16px;
+  background-color: #dddfd8;
 }
 
 .add-task-form input,
@@ -115,6 +116,7 @@ h1 {
   border-radius: 4px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
+  background-color: #dddfd8;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
