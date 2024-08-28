@@ -19,7 +19,7 @@ A Task Management App built with React JS and TypeScript with the following feat
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/username/repository.git
+git clone https://github.com/jeetbhalani15/task-management-app.git
 cd repository
 ```
 
